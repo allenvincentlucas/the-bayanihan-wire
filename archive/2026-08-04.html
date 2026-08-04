@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Bayanihan Wire — August 4, 2026</title>
+<meta name="description" content="Six dispatches of Filipino excellence: Alex Eala's first WTA 500 title, two youth softball world-series bids, a football comeback, a philanthropy milestone, and a community awards launch.">
+
+<!-- ============================================================
+     SOCIAL PREVIEW CARD (Open Graph / Twitter Card)
+     ⚠️ Replace https://allenvincentlucas.github.io/the-bayanihan-wire below with your live GitHub Pages
+     URL once the repo is published, e.g.
+     https://yourusername.github.io/bayanihan-wire
+     ============================================================ -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="The Bayanihan Wire">
+<meta property="og:title" content="The Bayanihan Wire — August 4, 2026">
+<meta property="og:description" content="Six dispatches of Filipino excellence: Alex Eala's first WTA 500 title, two youth softball world-series bids, a football comeback, a philanthropy milestone, and a community awards launch.">
+<meta property="og:image" content="https://allenvincentlucas.github.io/the-bayanihan-wire/assets/img/og-2026-08-04.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://allenvincentlucas.github.io/the-bayanihan-wire/archive/2026-08-04.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Bayanihan Wire — August 4, 2026">
+<meta name="twitter:description" content="Six dispatches of Filipino excellence: Alex Eala's first WTA 500 title, two youth softball world-series bids, a football comeback, a philanthropy milestone, and a community awards launch.">
+<meta name="twitter:image" content="https://allenvincentlucas.github.io/the-bayanihan-wire/assets/img/og-2026-08-04.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper: #EFE6D3;
+    --paper-card: #F8F2E4;
+    --ink: #202B22;
+    --ink-soft: #4B5449;
+    --gold: #D79A32;
+    --gold-deep: #B9791F;
+    --red: #A5332A;
+    --green: #4B6B4F;
+    --rule: rgba(32,43,34,0.14);
+  }
+
+  *{ box-sizing: border-box; }
+
+  html{ scroll-behavior: smooth; }
+
+  body{
+    margin:0;
+    background:
+      radial-gradient(circle at 15% 8%, rgba(215,154,50,0.10), transparent 40%),
+      radial-gradient(circle at 85% 92%, rgba(75,107,79,0.08), transparent 45%),
+      var(--paper);
+    background-attachment: fixed;
+    color: var(--ink);
+    font-family: 'Source Sans 3', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* subtle corkboard-linen texture */
+  body::before{
+    content:"";
+    position: fixed;
+    inset:0;
+    pointer-events:none;
+    opacity:0.5;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(0,0,0,0.015) 0px, rgba(0,0,0,0.015) 1px, transparent 1px, transparent 3px),
+      repeating-linear-gradient(90deg, rgba(0,0,0,0.012) 0px, rgba(0,0,0,0.012) 1px, transparent 1px, transparent 3px);
+    mix-blend-mode: multiply;
+  }
+
+  .wrap{
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 24px 90px;
+    position: relative;
+  }
+
+  /* ---------- MASTHEAD ---------- */
+  .masthead{
+    text-align:center;
+    margin-bottom: 46px;
+  }
+
+  .seal{
+    width: 74px; height: 74px;
+    margin: 0 auto 18px;
+    position: relative;
+  }
+  .seal svg{ width:100%; height:100%; display:block; animation: seal-in 900ms ease-out both; }
+  @keyframes seal-in{
+    from{ opacity:0; transform: scale(0.7) rotate(-14deg); }
+    to{ opacity:1; transform: scale(1) rotate(0deg); }
+  }
+
+  .eyebrow{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 11.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--red);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  h1.title{
+    font-family:'Fraunces', serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: clamp(2.2rem, 6vw, 3.1rem);
+    line-height: 1.05;
+    margin: 0 0 14px;
+    letter-spacing: -0.01em;
+  }
+
+  .masthead .dateline{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    letter-spacing: 0.06em;
+  }
+
+  .masthead .rule{
+    width: 120px;
+    height: 3px;
+    margin: 22px auto 0;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    border-radius: 2px;
+  }
+
+  .intro{
+    max-width: 560px;
+    margin: 26px auto 0;
+    text-align:center;
+    font-size: 1.02rem;
+    line-height: 1.65;
+    color: var(--ink-soft);
+  }
+
+  .archive-nav{ text-align:center; margin-top: 20px; }
+  .archive-nav a{
+    font-family:'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--gold-deep); text-decoration:none; border-bottom: 1px solid rgba(185,121,31,0.4); padding-bottom: 2px;
+    transition: color 160ms ease, border-color 160ms ease;
+  }
+  .archive-nav a:hover, .archive-nav a:focus-visible{ color: var(--red); border-color: var(--red); }
+
+  /* ---------- DISPATCH FEED ---------- */
+  .feed{
+    display:flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .dispatch{
+    background: var(--paper-card);
+    border-radius: 3px;
+    padding: 30px 32px 28px;
+    position: relative;
+    box-shadow:
+      0 1px 0 rgba(255,255,255,0.6) inset,
+      0 14px 30px -18px rgba(32,43,34,0.35),
+      0 2px 6px rgba(32,43,34,0.08);
+    border: 1px solid rgba(32,43,34,0.08);
+    opacity: 0;
+    transform: translateY(10px);
+    animation: rise 700ms ease-out forwards;
+  }
+  .dispatch:nth-of-type(1){ animation-delay: 60ms; }
+  .dispatch:nth-of-type(2){ animation-delay: 130ms; }
+  .dispatch:nth-of-type(3){ animation-delay: 200ms; }
+  .dispatch:nth-of-type(4){ animation-delay: 270ms; }
+  .dispatch:nth-of-type(5){ animation-delay: 340ms; }
+  .dispatch:nth-of-type(6){ animation-delay: 410ms; }
+  @keyframes rise{ to{ opacity:1; transform: translateY(0); } }
+
+  /* torn top edge */
+  .dispatch::before{
+    content:"";
+    position:absolute;
+    top:-1px; left:0; right:0;
+    height: 9px;
+    background-image: linear-gradient(135deg, var(--paper) 50%, transparent 50%),
+                       linear-gradient(45deg, var(--paper) 50%, transparent 50%);
+    background-size: 14px 14px;
+    background-position: 0 0, 7px 0;
+    background-repeat: repeat-x;
+  }
+
+  /* pin */
+  .pin{
+    position:absolute;
+    top: -13px;
+    left: 28px;
+    width: 22px; height: 22px;
+    border-radius:50%;
+    background: radial-gradient(circle at 32% 30%, #f0c56a, var(--gold-deep) 70%);
+    box-shadow: 0 3px 5px rgba(32,43,34,0.35), inset 0 1px 1px rgba(255,255,255,0.5);
+    border: 1px solid rgba(0,0,0,0.08);
+  }
+
+  .dispatch-head{
+    display:flex;
+    align-items:baseline;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 6px 0 4px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .dispatch-no{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--gold-deep);
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .dispatch-tag{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+  }
+
+  h2.story-title{
+    font-family:'Fraunces', serif;
+    font-weight: 600;
+    font-size: 1.42rem;
+    line-height: 1.28;
+    margin: 16px 0 12px;
+    letter-spacing: -0.005em;
+  }
+
+  .icon-badge{
+    font-size: 1.05em;
+    margin-right: 8px;
+  }
+
+  .story-body{
+    font-size: 1rem;
+    line-height: 1.68;
+    color: var(--ink);
+    margin: 0 0 18px;
+  }
+  .story-body strong{ color: var(--ink); }
+  .story-body em{ color: var(--green); font-style: italic; }
+
+  .links{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 10px 14px;
+    align-items:center;
+    font-family:'JetBrains Mono', monospace;
+    font-size: 12.5px;
+  }
+
+  .links a{
+    color: var(--red);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(165,51,42,0.35);
+    padding-bottom: 1px;
+    transition: border-color 160ms ease, color 160ms ease;
+  }
+  .links a:hover, .links a:focus-visible{
+    border-color: var(--red);
+    color: var(--gold-deep);
+  }
+  .links a:focus-visible{ outline: 2px solid var(--gold); outline-offset: 3px; }
+
+  .links .label{
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  /* ---------- EMBEDDED CLIPPING (video) ---------- */
+  .clipping{
+    position: relative;
+    margin: 4px 0 18px;
+    padding: 10px 10px 12px;
+    background: var(--paper);
+    border: 1px solid rgba(32,43,34,0.12);
+    box-shadow: 0 8px 18px -12px rgba(32,43,34,0.4);
+    transform: rotate(-0.4deg);
+  }
+  .dispatch:nth-of-type(even) .clipping{ transform: rotate(0.4deg); }
+
+  .clipping .tape{
+    position: absolute;
+    top: -9px; left: 50%;
+    transform: translateX(-50%) rotate(-2deg);
+    width: 70px; height: 20px;
+    background: rgba(215,154,50,0.35);
+    border: 1px solid rgba(185,121,31,0.25);
+  }
+
+  .clipping .frame{
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 */
+    background: #12140f;
+    overflow: hidden;
+  }
+  .clipping .frame iframe{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  .clipping .caption{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    text-align: center;
+    margin-top: 9px;
+  }
+
+  /* ---------- SHARE STRIP ---------- */
+  .share-strip{
+    margin-top: 46px;
+    padding: 26px 28px;
+    background: var(--paper-card);
+    border: 1px dashed rgba(32,43,34,0.22);
+    border-radius: 3px;
+    text-align: center;
+  }
+  .share-strip .label{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 16px;
+  }
+  .share-buttons{
+    display:flex;
+    justify-content:center;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .share-btn{
+    display:inline-flex;
+    align-items:center;
+    gap: 9px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    border: 1px solid rgba(32,43,34,0.15);
+    background: var(--paper);
+    color: var(--ink);
+    font-family:'Source Sans 3', sans-serif;
+    font-weight: 600;
+    font-size: 0.92rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 140ms ease, box-shadow 140ms ease, background 140ms ease;
+  }
+  .share-btn:hover, .share-btn:focus-visible{
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px -10px rgba(32,43,34,0.4);
+    background: var(--paper-card);
+  }
+  .share-btn .glyph{
+    width: 20px; height:20px;
+    display:inline-flex; align-items:center; justify-content:center;
+    border-radius: 50%;
+    font-size: 12px; font-weight:700;
+    color: var(--paper);
+  }
+  .share-btn.fb .glyph{ background: #3B5998; }
+  .share-btn.x .glyph{ background: var(--ink); }
+  .share-btn.ig .glyph{ background: linear-gradient(135deg, #C8172B, var(--gold)); }
+  .share-note{
+    margin-top: 14px;
+    font-size: 12px;
+    color: var(--ink-soft);
+    font-style: italic;
+    display:none;
+  }
+  .share-note.visible{ display:block; }
+
+  /* ---------- FOOTER ---------- */
+  .colophon{
+    text-align:center;
+    margin-top: 40px;
+  }
+  .colophon .rays{
+    width: 40px; height:40px;
+    margin: 0 auto 14px;
+    opacity: 0.85;
+  }
+  .colophon p{
+    font-family:'Fraunces', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: var(--ink-soft);
+    margin: 0 0 6px;
+  }
+  .colophon .small{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    opacity: 0.7;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .dispatch, .seal svg{ animation: none !important; opacity:1 !important; transform:none !important; }
+  }
+
+  @media (max-width: 480px){
+    .dispatch{ padding: 26px 20px 22px; }
+    h2.story-title{ font-size: 1.24rem; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="seal" aria-hidden="true">
+      <svg viewBox="0 0 100 100" fill="none">
+        <circle cx="50" cy="50" r="47" fill="#F8F2E4" stroke="#B9791F" stroke-width="2"/>
+        <g stroke="#D79A32" stroke-width="3" stroke-linecap="round">
+          <line x1="50" y1="10" x2="50" y2="24"/>
+          <line x1="50" y1="76" x2="50" y2="90"/>
+          <line x1="10" y1="50" x2="24" y2="50"/>
+          <line x1="76" y1="50" x2="90" y2="50"/>
+          <line x1="21" y1="21" x2="30" y2="30"/>
+          <line x1="70" y1="70" x2="79" y2="79"/>
+          <line x1="79" y1="21" x2="70" y2="30"/>
+          <line x1="30" y1="70" x2="21" y2="79"/>
+        </g>
+        <circle cx="50" cy="50" r="16" fill="#A5332A"/>
+        <circle cx="50" cy="50" r="16" fill="none" stroke="#4B6B4F" stroke-width="1.5"/>
+      </svg>
+    </div>
+    <div class="eyebrow">Good News from the Islands</div>
+    <h1 class="title">The Bayanihan Wire</h1>
+    <div class="dateline">DATELINE — MANILA · TUESDAY, AUGUST 4, 2026</div>
+    <div class="rule"></div>
+    <p class="intro">Six dispatches pinned to today's board — from a historic tennis crown in Washington to a community award in Eastern Visayas. Ground-breaking feats abroad, bayanihan spirit at home.</p>
+    <nav class="archive-nav"><a href="../archive/index.html">📌 Browse Past Issues</a></nav>
+  </header>
+
+  <main class="feed">
+
+    <article class="dispatch">
+      <div class="pin" aria-hidden="true"></div>
+      <div class="dispatch-head">
+        <span class="dispatch-no">Dispatch No. 1</span>
+        <span class="dispatch-tag">Sport · Tennis</span>
+      </div>
+      <h2 class="story-title"><span class="icon-badge">🎾</span>Eala Claims Her First WTA 500 Crown in Washington</h2>
+      <p class="story-body">
+        Filipina tennis phenom <strong>Alex Eala</strong> captured her first-ever WTA 500 singles title at the Washington DC Open (Mubadala Citi DC Open), coming back against world No. 3 Jessica Pegula of the United States to win 4-6, 6-4, 6-0.
+      </p>
+      <p class="story-body">
+        Eala is the first Filipino player in history to win a WTA 500 title. President Ferdinand R. Marcos Jr. commended the milestone, calling her determination an inspiration to young athletes nationwide.
+      </p>
+      <div class="clipping">
+        <div class="tape" aria-hidden="true"></div>
+        <div class="frame">
+          <iframe src="https://www.youtube.com/embed/OvjNXy1mQjY" title="WTA Official Match Highlights: Jessica Pegula vs. Alexandra Eala" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="caption">WTA Official Match Highlights</div>
+      </div>
+      <div class="links">
+        <span class="label">Read:</span>
+        <a href="https://mb.com.ph/2026/08/04/she-does-it-again-marcos-hails-alex-eala-for-winning-first-wta-title" target="_blank" rel="noopener">Manila Bulletin</a>
+        <a href="https://www.facebook.com/pnagovph/posts/i-know-this-wont-be-my-last-alex-eala-says-at-the-trophy-ceremony-of-the-mubadal/1461858075990642/" target="_blank" rel="noopener">PNA Update</a>
+      </div>
+    </article>
+
+    <article class="dispatch">
+      <div class="pin" aria-hidden="true"></div>
+      <div class="dispatch-head">
+        <span class="dispatch-no">Dispatch No. 2</span>
+        <span class="dispatch-tag">Sport · Softball</span>
+      </div>
+      <h2 class="story-title"><span class="icon-badge">🥎</span>Sagay City Girls Win 2026 PONY World Series Title</h2>
+      <p class="story-body">
+        The 12-Under Girls softball team from Sagay City, Negros Occidental (Jose B. Puey Sr. Elementary) brought home the championship at the 2026 PONY International West Zone Softball World Series in Hemet, California — Sagay City's <em>second</em> international PONY World Series title this year, following their 14-Under win last month.
+      </p>
+      <div class="clipping">
+        <div class="tape" aria-hidden="true"></div>
+        <div class="frame">
+          <iframe src="https://www.youtube.com/embed/As_3JTxzWzU" title="IBC News Coverage: Sagay City softbelles win 2026 PONY World Series title" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="caption">IBC News Coverage</div>
+      </div>
+      <div class="links">
+        <span class="label">Read:</span>
+        <a href="https://www.pna.gov.ph/articles/1280982" target="_blank" rel="noopener">Philippine News Agency</a>
+      </div>
+    </article>
+
+    <article class="dispatch">
+      <div class="pin" aria-hidden="true"></div>
+      <div class="dispatch-head">
+        <span class="dispatch-no">Dispatch No. 3</span>
+        <span class="dispatch-tag">Community · Philanthropy</span>
+      </div>
+      <h2 class="story-title"><span class="icon-badge">🤝</span>Philippines Ranks 2nd in SEA for Philanthropic Environment</h2>
+      <p class="story-body">
+        The Philippines held its "Doing Better" status in the <strong>2026 Doing Good Index (DGI)</strong>, ranking second in Southeast Asia — just behind Singapore — for its enabling environment for charitable work. World Giving Report data shows <strong>78% of Filipinos donated to charity</strong>, a reflection of the deeply rooted culture of <em>bayanihan</em> still uplifting local communities.
+      </p>
+      <div class="links">
+        <span class="label">Read:</span>
+        <a href="https://www.pna.gov.ph/articles/1280947" target="_blank" rel="noopener">Philippine News Agency</a>
+      </div>
+    </article>
+
+    <article class="dispatch">
+      <div class="pin" aria-hidden="true"></div>
+      <div class="dispatch-head">
+        <span class="dispatch-no">Dispatch No. 4</span>
+        <span class="dispatch-tag">Sport · Softball</span>
+      </div>
+      <h2 class="story-title"><span class="icon-badge">⚾</span>Bulacan Dreamers Head to the Senior League World Series</h2>
+      <p class="story-body">
+        The <strong>Bulacan Dreamers Women's Softball Team</strong> has set off to represent the Philippines and the Asia-Pacific Region at the 2026 Senior League Softball World Series in Sussex County, Delaware — a spot earned by taking the crown at the Asia-Pacific and Middle East Tournament in Indonesia.
+      </p>
+      <div class="clipping">
+        <div class="tape" aria-hidden="true"></div>
+        <div class="frame">
+          <iframe src="https://www.youtube.com/embed/RcCzVcBHr-A" title="PTV Sports Report: Bulacan Dreamers qualify for 2026 Senior League Softball World Series" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="caption">PTV Sports Report</div>
+      </div>
+      <div class="links">
+        <span class="label">Read:</span>
+        <a href="https://www.pna.gov.ph/articles/1280969" target="_blank" rel="noopener">Philippine News Agency</a>
+      </div>
+    </article>
+
+    <article class="dispatch">
+      <div class="pin" aria-hidden="true"></div>
+      <div class="dispatch-head">
+        <span class="dispatch-no">Dispatch No. 5</span>
+        <span class="dispatch-tag">Sport · Football</span>
+      </div>
+      <h2 class="story-title"><span class="icon-badge">⚽</span>Azkals Stage 4-1 Comeback Over Laos</h2>
+      <p class="story-body">
+        The Philippine Men's National Football Team reignited its 2026 ASEAN Championship–Hyundai Cup campaign with a 4-1 comeback win over Laos in Vientiane, netting four unanswered second-half goals after trailing at the break to secure three key points in Group B.
+      </p>
+      <div class="links">
+        <span class="label">Read:</span>
+        <a href="https://www.pna.gov.ph/index.php/articles/1280892" target="_blank" rel="noopener">Philippine News Agency</a>
+        <span class="label">Watch:</span>
+        <a href="https://www.google.com/search?q=http://www.youtube.com/watch%3Fw2_Rt4jcP28" target="_blank" rel="noopener">Match Highlights</a>
+      </div>
+    </article>
+
+    <article class="dispatch">
+      <div class="pin" aria-hidden="true"></div>
+      <div class="dispatch-head">
+        <span class="dispatch-no">Dispatch No. 6</span>
+        <span class="dispatch-tag">Community · Recognition</span>
+      </div>
+      <h2 class="story-title"><span class="icon-badge">🏅</span>First Outstanding Eastern Visayans Awards Honor Local Leaders</h2>
+      <p class="story-body">
+        The inaugural Outstanding Eastern Visayans Awards recognized local leaders, public servants, and social impact champions across Region 8 — honoring individuals whose service inspires residents to lead with integrity and purpose.
+      </p>
+      <div class="links">
+        <span class="label">Read:</span>
+        <a href="https://pia.gov.ph/news/first-outstanding-eastern-visayans-awards-honor-trailblazers-in-service-leadership-social-impact/" target="_blank" rel="noopener">Philippine Information Agency</a>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- ============================================================
+       SHARE STRIP
+       Builds share links dynamically from this page's own og:title /
+       og:description / og:image meta tags — no per-file JS editing
+       needed. Facebook and X pre-fill their compose window; Instagram
+       has no web intent for this, so the button copies a caption to
+       the clipboard instead and opens Instagram for pasting.
+       ============================================================ -->
+  <section class="share-strip">
+    <div class="label">Pass It On</div>
+    <div class="share-buttons">
+      <a class="share-btn fb" id="share-fb" href="#" target="_blank" rel="noopener">
+        <span class="glyph">f</span> Facebook
+      </a>
+      <a class="share-btn x" id="share-x" href="#" target="_blank" rel="noopener">
+        <span class="glyph">𝕏</span> X
+      </a>
+      <button class="share-btn ig" id="share-ig" type="button">
+        <span class="glyph">◎</span> Instagram
+      </button>
+    </div>
+    <p class="share-note" id="share-note">Caption copied — paste it into your Instagram post or Story.</p>
+  </section>
+
+  <footer class="colophon">
+    <svg class="rays" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+      <g stroke="#D79A32" stroke-width="4" stroke-linecap="round">
+        <line x1="50" y1="6" x2="50" y2="28"/>
+        <line x1="50" y1="72" x2="50" y2="94"/>
+        <line x1="6" y1="50" x2="28" y2="50"/>
+        <line x1="72" y1="50" x2="94" y2="50"/>
+      </g>
+    </svg>
+    <p>Celebrating Filipino excellence, one dispatch at a time.</p>
+    <div class="small">The Bayanihan Wire</div>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  function metaContent(selector){
+    var el = document.querySelector(selector);
+    return el ? el.getAttribute('content') : '';
+  }
+
+  var pageUrl = window.location.href;
+  var title = metaContent('meta[property="og:title"]') || document.title;
+  var description = metaContent('meta[property="og:description"]') || metaContent('meta[name="description"]') || '';
+  var caption = title + ' — ' + description + '\n\n' + pageUrl;
+
+  var fbLink = document.getElementById('share-fb');
+  if (fbLink){
+    fbLink.href = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl);
+  }
+
+  var xLink = document.getElementById('share-x');
+  if (xLink){
+    var xText = title + ' — ' + description;
+    xLink.href = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(xText) + '&url=' + encodeURIComponent(pageUrl);
+  }
+
+  var igBtn = document.getElementById('share-ig');
+  var igNote = document.getElementById('share-note');
+  if (igBtn){
+    igBtn.addEventListener('click', function(){
+      var done = function(){
+        if (igNote){
+          igNote.classList.add('visible');
+          setTimeout(function(){ igNote.classList.remove('visible'); }, 6000);
+        }
+        window.open('https://www.instagram.com/', '_blank', 'noopener');
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(caption).then(done).catch(done);
+      } else {
+        done();
+      }
+    });
+  }
+})();
+</script>
+
+</body>
+</html>

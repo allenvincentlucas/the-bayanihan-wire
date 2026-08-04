@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Archive — The Bayanihan Wire</title>
+<meta name="description" content="Browse past issues of The Bayanihan Wire — a running archive of good news, Filipino excellence, and bayanihan spirit.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Bayanihan Wire">
+<meta property="og:title" content="Archive — The Bayanihan Wire">
+<meta property="og:description" content="Browse past issues of The Bayanihan Wire — a running archive of good news, Filipino excellence, and bayanihan spirit.">
+<meta property="og:image" content="https://allenvincentlucas.github.io/the-bayanihan-wire/assets/img/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://allenvincentlucas.github.io/the-bayanihan-wire/archive/index.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://allenvincentlucas.github.io/the-bayanihan-wire/assets/img/og-default.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper: #EFE6D3;
+    --paper-card: #F8F2E4;
+    --ink: #202B22;
+    --ink-soft: #4B5449;
+    --gold: #D79A32;
+    --gold-deep: #B9791F;
+    --red: #A5332A;
+    --green: #4B6B4F;
+    --rule: rgba(32,43,34,0.14);
+  }
+  *{ box-sizing: border-box; }
+  body{
+    margin:0;
+    background:
+      radial-gradient(circle at 15% 8%, rgba(215,154,50,0.10), transparent 40%),
+      radial-gradient(circle at 85% 92%, rgba(75,107,79,0.08), transparent 45%),
+      var(--paper);
+    background-attachment: fixed;
+    color: var(--ink);
+    font-family: 'Source Sans 3', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  body::before{
+    content:""; position: fixed; inset:0; pointer-events:none; opacity:0.5;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(0,0,0,0.015) 0px, rgba(0,0,0,0.015) 1px, transparent 1px, transparent 3px),
+      repeating-linear-gradient(90deg, rgba(0,0,0,0.012) 0px, rgba(0,0,0,0.012) 1px, transparent 1px, transparent 3px);
+    mix-blend-mode: multiply;
+  }
+
+  .wrap{ max-width: 700px; margin: 0 auto; padding: 56px 24px 90px; }
+
+  .masthead{ text-align:center; margin-bottom: 40px; }
+  .eyebrow{
+    font-family:'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--red); font-weight: 600; margin-bottom: 10px;
+  }
+  h1.title{
+    font-family:'Fraunces', serif; font-weight: 600; font-size: clamp(2rem, 5.5vw, 2.6rem);
+    line-height: 1.08; margin: 0 0 12px; letter-spacing: -0.01em;
+  }
+  .masthead .rule{ width: 100px; height: 3px; margin: 18px auto 0; background: linear-gradient(90deg, transparent, var(--gold), transparent); border-radius: 2px; }
+  .back{ text-align:center; margin-top: 18px; }
+  .back a{
+    font-family:'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--gold-deep); text-decoration:none; border-bottom: 1px solid rgba(185,121,31,0.4); padding-bottom: 2px;
+  }
+  .back a:hover{ color: var(--red); border-color: var(--red); }
+
+  .ledger{ display:flex; flex-direction:column; gap: 14px; margin-top: 10px; }
+
+  .entry{
+    display:flex; align-items:center; gap: 18px;
+    background: var(--paper-card);
+    border: 1px solid rgba(32,43,34,0.08);
+    border-radius: 3px;
+    padding: 18px 22px;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.6) inset, 0 8px 18px -14px rgba(32,43,34,0.35);
+    text-decoration:none;
+    color: inherit;
+    transition: transform 160ms ease, box-shadow 160ms ease;
+  }
+  .entry:hover, .entry:focus-visible{
+    transform: translateY(-2px);
+    box-shadow: 0 1px 0 rgba(255,255,255,0.6) inset, 0 14px 26px -16px rgba(32,43,34,0.45);
+  }
+
+  .entry .stamp{
+    flex: 0 0 auto;
+    width: 54px; height: 54px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 32% 30%, #f0c56a, var(--gold-deep) 70%);
+    display:flex; align-items:center; justify-content:center;
+    box-shadow: inset 0 1px 1px rgba(255,255,255,0.5), 0 2px 4px rgba(32,43,34,0.25);
+  }
+  .entry .stamp span{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 10px; font-weight:600; color: #3a2a0d; text-align:center; line-height:1.2;
+  }
+
+  .entry .meta{ flex: 1 1 auto; }
+  .entry .date{
+    font-family:'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--gold-deep); font-weight:600; margin-bottom: 4px;
+  }
+  .entry h2{
+    font-family:'Fraunces', serif; font-weight:600; font-size: 1.15rem; margin: 0 0 4px; line-height: 1.25;
+  }
+  .entry .desc{ font-size: 0.92rem; color: var(--ink-soft); line-height: 1.5; margin:0; }
+
+  .entry .arrow{
+    flex: 0 0 auto; font-family:'JetBrains Mono', monospace; color: var(--red); font-size: 1.2rem;
+  }
+
+  .empty-note{
+    text-align:center; color: var(--ink-soft); font-family:'Fraunces', serif; font-style: italic;
+    font-size: 1.05rem; margin-top: 40px;
+  }
+
+  .colophon{ text-align:center; margin-top: 56px; }
+  .colophon p{ font-family:'Fraunces', serif; font-style: italic; font-weight: 500; font-size: 1rem; color: var(--ink-soft); margin: 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="eyebrow">Good News from the Islands</div>
+    <h1 class="title">The Archive</h1>
+    <div class="rule"></div>
+    <div class="back"><a href="../index.html">← Back to the Latest Issue</a></div>
+  </header>
+
+  <!-- ============================================================
+       LEDGER — one .entry per past issue, most recent first.
+       When archiving a new issue, add a new .entry block at the
+       TOP of this list. See WORKFLOW.md → "Archiving a new issue".
+       ============================================================ -->
+  <main class="ledger">
+
+    <a class="entry" href="2026-08-04.html">
+      <div class="stamp"><span>AUG<br>04</span></div>
+      <div class="meta">
+        <div class="date">Tuesday, August 4, 2026</div>
+        <h2>Eala's Historic Crown &amp; Six Dispatches of Bayanihan Spirit</h2>
+        <p class="desc">Alex Eala's first WTA 500 title, two youth softball world-series bids, and a philanthropy milestone.</p>
+      </div>
+      <div class="arrow">→</div>
+    </a>
+
+  </main>
+
+  <footer class="colophon">
+    <p>Every dispatch, pinned and kept.</p>
+  </footer>
+
+</div>
+</body>
+</html>
