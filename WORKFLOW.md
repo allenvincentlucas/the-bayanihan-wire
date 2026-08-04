@@ -22,6 +22,24 @@ them into the blog"* — with or without an explicit request for HTML.
   archive listing page).
 - `WORKFLOW.md` — this file.
 
+## Favicon
+
+The site uses a small version of the sun-ray seal as its favicon, generated
+by `scripts/generate_favicon.py` into `assets/favicon/`. It only needs to be
+generated once — reuse the same files for every new issue; there's no
+per-issue favicon. If the brand mark ever changes, regenerate with:
+
+```bash
+cd scripts
+python3 generate_favicon.py --out ../assets/favicon
+```
+
+Every page's `<head>` links to it with paths relative to that page's own
+location — root-level pages (`index.html`, `template.html`) use
+`assets/favicon/...`, while anything inside `archive/` uses
+`../assets/favicon/...`. Keep that in mind if a new page type is ever added
+at a different folder depth.
+
 ## Social preview cards & sharing
 
 Every issue gets its own Open Graph / Twitter Card meta tags plus a
@@ -52,9 +70,9 @@ In the new issue's `<head>`, replace every token:
 | `{{ISSUE_DATE_LONG}}` | e.g. `August 4, 2026` |
 | `{{ISSUE_DATE_ISO}}` | e.g. `2026-08-04` (must match the image filename) |
 | `{{ISSUE_DESCRIPTION}}` | One specific sentence naming that day's actual stories — not generic boilerplate. This is what shows under the title in link previews. |
-| `{{https://allenvincentlucas.github.io/the-bayanihan-wire}}` | The live GitHub Pages URL with no trailing slash, e.g. `https://username.github.io/repo-name`. **This must be an absolute URL** — Facebook/X/Slack crawlers fetch `og:image` directly and cannot resolve relative paths. |
+| `{{SITE_BASE_URL}}` | The live GitHub Pages URL with no trailing slash, e.g. `https://username.github.io/repo-name`. **This must be an absolute URL** — Facebook/X/Slack crawlers fetch `og:image` directly and cannot resolve relative paths. |
 
-Once `https://allenvincentlucas.github.io/the-bayanihan-wire` is known (after the repo is connected — see "Direct
+Once `SITE_BASE_URL` is known (after the repo is connected — see "Direct
 push setup"), it only needs to be set once; carry it forward into every new
 issue rather than re-deriving it each time.
 

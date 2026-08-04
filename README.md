@@ -16,9 +16,11 @@ Published via GitHub Pages.
 │   ├── index.html          ← ledger page listing every past issue
 │   └── YYYY-MM-DD.html     ← one archived issue per date
 ├── assets/
-│   └── img/                ← generated social preview cards (og-*.png)
+│   ├── favicon/             ← favicon set (ico, svg, png, apple-touch-icon)
+│   └── img/                 ← generated social preview cards (og-*.png)
 ├── scripts/
-│   └── generate_og_image.py ← generates the preview card for a new issue
+│   ├── generate_og_image.py ← generates the preview card for a new issue
+│   └── generate_favicon.py  ← regenerates the favicon set (one-time/rare)
 ├── template.html           ← reusable master template for a new issue
 ├── archive-template.html   ← reusable master template for the ledger page
 ├── WORKFLOW.md              ← step-by-step build + archive + push instructions
