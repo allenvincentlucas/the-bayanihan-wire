@@ -15,6 +15,8 @@ Published via GitHub Pages.
 ├── archive/
 │   ├── index.html          ← ledger page listing every past issue
 │   └── YYYY-MM-DD.html     ← one archived issue per date
+├── social/
+│   └── YYYY-MM-DD.md       ← ready-to-post captions (X, Facebook, Instagram)
 ├── assets/
 │   ├── favicon/             ← favicon set (ico, svg, png, apple-touch-icon)
 │   └── img/                 ← generated social preview cards (og-*.png)
@@ -34,12 +36,17 @@ the latest issue.
 ## Social sharing
 
 Every issue has its own Open Graph/Twitter preview card (title, summary,
-1200×630 image) so links look right when shared, plus a "Pass It On" share
-strip at the bottom with working Facebook and X buttons (both open with
-the post's title/description/link already filled in) and an Instagram
-button that copies a ready-made caption to the clipboard, since Instagram
-doesn't support pre-filled posts from a website. Full details, including
-how to generate a new preview image, are in `WORKFLOW.md`.
+1200×630 image) so links look right when shared on Facebook, X, Slack,
+iMessage, etc., plus a "Pass It On" share strip at the bottom of the page
+with working Facebook and X buttons (both open with the post's
+title/description/link already filled in) and an Instagram button that
+copies a ready-made caption to the clipboard, since Instagram doesn't
+support pre-filled posts from a website.
+
+Every issue also comes with a `social/YYYY-MM-DD.md` file containing
+ready-to-paste captions written specifically for X, Facebook, and
+Instagram — no manual copywriting needed per post. Full details are in
+`WORKFLOW.md`.
 
 **Live URL is already set.** The social preview meta tags in `index.html`
 and `archive/` are wired to `https://allenvincentlucas.github.io/the-bayanihan-wire`

@@ -215,7 +215,52 @@ replaces the current one:
 4. **Publish the new issue** as the new `index.html` at the repo root, with
    a fresh `📌 Browse Past Issues` link pointing to `archive/index.html`.
 
-## The "paste and push" workflow
+## Generating ready-to-post captions
+
+Every finished issue also gets three ready-to-paste social captions — one
+per platform — generated automatically as the last build step, saved to
+`social/YYYY-MM-DD.md` in the repo, and shown to the user in chat so they
+can copy them immediately without opening the file.
+
+Write one caption per platform, each in that platform's own voice:
+
+- **X (Twitter):** ≤ 280 characters including the link. Punchy, present
+  tense, lead with the single most striking fact of the day. 1–2 relevant
+  hashtags max, not stacked. Always end with the page URL — X unfurls it
+  into a card automatically from the `twitter:` meta tags, so the link
+  itself does the visual work.
+- **Facebook:** 2–4 warm, narrative sentences, more conversational than X.
+  Mention two or three of the day's stories by name rather than just the
+  lead. End with the URL — Facebook renders its own preview card from the
+  `og:` meta tags, so don't restate the headline mechanically.
+- **Instagram:** caption-style with light emoji use, 3–5 short lines
+  summarizing the day's spread, then a line break and a block of 8–12
+  relevant hashtags (mix broad tags like #GoodNews #Philippines with
+  specific ones like #AlexEala when a story warrants it). Note "Link in
+  bio" instead of a raw URL — Instagram captions don't render clickable
+  links.
+
+Keep captions specific to that day's actual stories — never generic
+filler ("Check out today's good news!"). Save all three together in one
+file per issue, e.g.:
+
+```markdown
+# Social captions — August 4, 2026
+
+## X
+...
+
+## Facebook
+...
+
+## Instagram
+...
+```
+
+This is a copy-paste convenience for the user, not something pushed live
+anywhere automatically — it doesn't post on their behalf.
+
+## Generating a new issue: the "paste and push" workflow
 
 Once the user has connected a GitHub repo (see "Direct push setup" below),
 they can simply paste a formatted blog post — headline(s)/body text plus any
@@ -226,10 +271,14 @@ intermediate zip/download step. Do this:
    above.
 2. Archive the current `index.html` per "Archiving a new issue" above.
 3. Update `archive/index.html` with the new ledger entry.
-4. Clone or pull the latest state of the connected repo, apply these three
-   file changes, commit with a message like `New issue: <date>`, and push.
-5. Confirm the push succeeded and report the commit/URL back to the user —
-   don't just say "done," show what changed.
+4. Generate the OG preview image and social captions per the sections
+   above; save captions to `social/YYYY-MM-DD.md`.
+5. Clone or pull the latest state of the connected repo, apply all file
+   changes, commit with a message like `New issue: <date>`, and push.
+6. Confirm the push succeeded and report the commit/URL back to the user —
+   don't just say "done," show what changed. Also paste the three social
+   captions directly into the chat reply so the user can copy them
+   immediately without opening the file.
 
 ### Direct push setup
 
