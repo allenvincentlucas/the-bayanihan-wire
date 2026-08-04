@@ -5,7 +5,6 @@ and community spirit — styled as a pinned-up community dispatch board.
 Published via GitHub Pages.
 
 **Live site:** `https://allenvincentlucas.github.io/the-bayanihan-wire/`
-(fill in once Pages is enabled — see below)
 
 ## What's in this repo
 
@@ -56,19 +55,59 @@ Facebook/X can still find the preview image.
 
 ## Publishing a new issue
 
-1. Paste the day's articles (and any YouTube links) to Claude, following
-   `WORKFLOW.md`.
-2. Once the new `index.html` is generated:
-   - Move the **current** `index.html` into `archive/` and rename it to
-     its issue date, e.g. `archive/2026-08-04.html`.
-   - Save the newly generated page as the new `index.html` at the repo root.
-3. Commit and push:
-   ```
-   git add .
-   git commit -m "New issue: <date>"
-   git push
-   ```
-4. GitHub Pages redeploys automatically within a minute or two.
+**The current workflow is: paste the finished articles (plus any YouTube
+links) to Claude, and Claude builds and pushes the new issue directly —
+no manual file editing or git commands needed on your end.**
+
+1. Paste the day's articles and any relevant YouTube video links to Claude.
+2. Provide a short-lived, fine-grained GitHub personal access token scoped
+   to this repo (**Contents: Read and write** only) — see "Direct push
+   access" below. Tokens expire, so expect to provide a fresh one each new
+   session.
+3. Claude then, in one pass:
+   - Writes each story as a dispatch (paraphrased, not copy-pasted),
+     embeds any valid YouTube video, and links sources.
+   - Archives the outgoing issue into `archive/YYYY-MM-DD.html` and adds
+     it to the `archive/index.html` ledger.
+   - Generates the new issue's social preview image and fills in its
+     `og:`/`twitter:` meta tags.
+   - Writes ready-to-post captions for X, Facebook, and Instagram into
+     `social/YYYY-MM-DD.md`.
+   - Commits everything in one commit (`New issue: <date>`) and pushes.
+4. Claude reports back the live URL and pastes the three social captions
+   directly into the chat reply, ready to copy.
+5. GitHub Pages redeploys automatically — usually within a minute, though
+   the Pages "builds" status API can lag behind the actual push by up to a
+   minute or two.
+
+Full technical detail for every step above lives in `WORKFLOW.md`.
+
+### Direct push access
+
+To push on your behalf, Claude needs, once per session:
+
+- A **fine-grained personal access token**
+  (github.com → Settings → Developer settings → Personal access tokens →
+  Fine-grained tokens → Generate new token)
+  - **Repository access:** this repo only
+  - **Permissions:** Contents → Read and write
+  - **Expiration:** as short as you're comfortable with
+- Your GitHub username (Claude can also resolve this from the token) and
+  this repo's name.
+
+Claude never prints, logs, or repeats the token back in chat, uses it only
+inline for the git push, and removes the credentialed git remote once the
+push completes. **Revoke the token after each session** once you've
+confirmed the push landed, unless you've deliberately decided to keep a
+longer-lived one — that's your call to make, not something Claude assumes.
+
+### Doing it manually instead
+
+If you'd rather build and push an issue yourself without Claude's direct
+push access, the file changes are the same ones listed in step 3 above —
+`WORKFLOW.md` documents the exact templates and placeholder tokens to fill
+in by hand, and the git commands are the standard `git add . && git commit
+&& git push`.
 
 ## Important: `.nojekyll`
 
@@ -80,16 +119,26 @@ build (`Liquid syntax error ... Variable '{{' was not properly terminated`).
 `.nojekyll` tells GitHub Pages to skip Jekyll entirely and serve the files
 as plain static HTML, which is all this site needs.
 
-## Enabling GitHub Pages (first-time setup)
+## GitHub Pages status
 
-1. Push this repo to GitHub (see "Creating the repo" below if starting fresh).
+Pages is already live for this repo: **Deploy from a branch**, branch
+`main`, folder `/ (root)`. No further setup needed. The reference steps
+below are only for recreating this from scratch (e.g. a fork or a new repo
+built from this project's template).
+
+<details>
+<summary>Enabling GitHub Pages from scratch</summary>
+
+1. Push the repo to GitHub.
 2. On GitHub: **Settings → Pages**.
 3. Under **Build and deployment → Source**, choose **Deploy from a branch**.
 4. Branch: `main`, folder: `/ (root)`. Save.
-5. GitHub gives you the live URL after the first deploy — update it at the
-   top of this README.
+5. GitHub gives you the live URL after the first deploy.
 
-## Creating the repo from scratch
+</details>
+
+<details>
+<summary>Creating a new repo from this template, from scratch</summary>
 
 ```bash
 cd bayanihan-wire-site
@@ -101,7 +150,9 @@ git remote add origin https://github.com/<your-username>/<repo-name>.git
 git push -u origin main
 ```
 
-Then follow "Enabling GitHub Pages" above.
+Then follow "Enabling GitHub Pages from scratch" above.
+
+</details>
 
 ## Design credit / theme notes
 
