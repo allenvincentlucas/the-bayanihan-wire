@@ -9,6 +9,10 @@ them into the blog"* — with or without an explicit request for HTML.
 
 ## Files in this folder
 
+- `README.md` — the project overview: the end-to-end "paste → build → push"
+  workflow explained in full, session/token requirements, and a quick
+  reference checklist. Read that first; this file is the detailed technical
+  reference it points to.
 - `template.html` — the master page for a single issue. All design tokens
   (color, type, layout, motion) live here. Copy it, don't rebuild it from
   scratch.
@@ -18,8 +22,13 @@ them into the blog"* — with or without an explicit request for HTML.
   card for a new issue. Requires Pillow (`pip install pillow
   --break-system-packages`). Fonts are bundled in `scripts/fonts/` — always
   run it from inside `scripts/` so it finds them.
+- `scripts/generate_favicon.py` — generates the favicon set. One-time/rare
+  use only — see "Favicon" below.
 - `assets/img/og-default.png` — generic fallback preview card (used by the
   archive listing page).
+- `assets/favicon/` — the generated favicon set, reused across every issue.
+- `social/2026-08-04-example.md` — a worked example of the ready-to-post
+  captions described under "Generating ready-to-post captions" below.
 - `WORKFLOW.md` — this file.
 
 ## Favicon
@@ -312,3 +321,7 @@ included in this folder — copy it into any repo scaffold you create.
 
 Use the repo scaffold workflow below (also documented in this project) to
 turn the finished `index.html` into a publishable GitHub Pages site.
+
+---
+
+*Last known live deployment: `https://allenvincentlucas.github.io/the-bayanihan-wire/`, repo `allenvincentlucas/the-bayanihan-wire`. Keep this in sync with the same line in `README.md`.*
